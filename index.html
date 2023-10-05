@@ -6,15 +6,14 @@
     <title>Take A (Mini) Step!!!</title>
   </head>
   <body style="text-align: center; width: 100%; height: 100vh; overflow: hidden;">
-    <canvas id="unity-canvas" style="position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
-    
-<div id="preloader_malc">
+	  <div id="preloader_malc">
 	<div>
 		Загрузка может занять какое-то время!
 		Спасибо, что ждете :)
 	</div>
 </div>
-    <style type="text/css">
+    <canvas id="unity-canvas" style="position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
+    <style>
 	#preloader_malc {
 		position: fixed;
 		top: 0;
@@ -65,15 +64,17 @@
         // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       });
-	    window.onload = function() {
+    </script>
+	  <script>
+		  window.onload = function() {
 
 		setTimeout(function() {
 
 			document.getElementById("preloader_malc").style.display = "none";
 
-		}, 4000);
+		}, 400);
 
 	};
-    </script>
+	  </script>
   </body>
 </html>
